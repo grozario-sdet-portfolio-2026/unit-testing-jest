@@ -1,12 +1,24 @@
 const sqlite3 = require('sqlite3').verbose()
 const path = require('path')
+const fs = require('fs')
 const logger = require('../../utils/logger')
 const {
   DATABASE_FILENAME,
   DATABASE_PATH
 } = require('../../constants')
 
-const databaseFilePath = path.join(__dirname, `../../../${DATABASE_PATH}/${DATABASE_FILENAME}`)
+const databaseDirPath = path.join(__dirname, `../../../${DATABASE_PATH}`)
+const databaseFilePath = path.join(databaseDirPath, DATABASE_FILENAME)
+
+// Create data directory if it doesn't exist
+try {
+  fs.mkdirSync(databaseDirPath, { recursive: true })
+} catch (error) {
+  logger.error('Failed to create database directory', {
+    directory: databaseDirPath,
+    error: error.message
+  })
+}
 
 let isConnected = false
 
