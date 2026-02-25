@@ -1,0 +1,103 @@
+// ============ API CONFIGURATION ============
+const API_DEFAULT_PORT = 3000
+const API_HEALTH_CHECK_MESSAGE = 'Restaurant Booking System'
+
+// ============ DATABASE CONFIGURATION ============
+const DATABASE_FILENAME = 'restaurant_booking.db'
+const DATABASE_PATH = 'data'
+
+// ============ LOCATIONIQ API CONSTANTS ============
+const LOCATION_IQ_API_KEY = process.env.LOCATION_IQ_KEY
+const LOCATION_IQ_BASE_URL = 'https://us1.locationiq.com/v1'
+const LOCATION_IQ_API_TIMEOUT_MS = 10000
+const LOCATION_IQ_NEARBY_SEARCH_RESULT_LIMIT = 100
+const LOCATION_IQ_BOUNDED_SEARCH_ENABLED = 1
+
+// ============ GEOGRAPHIC CONSTANTS ============
+const EARTH_RADIUS_KM = 6371
+const DEGREES_TO_RADIANS = Math.PI / 180
+const DEGREES_PER_KILOMETER = 1 / 110
+const DISTANCE_DECIMAL_PLACES = 2
+
+// ============ VALIDATION CONSTANTS ============
+
+// ============ RESTAURANT CONSTANTS ============
+const DEFAULT_RESTAURANT_NAME = 'Unknown Restaurant'
+const DEFAULT_ADDRESS = 'Address not available'
+
+// ============ RESERVATION CONSTANTS ============
+const RESERVATION_STATUS_CONFIRMED = 'confirmed'
+const RESERVATION_STATUS_CANCELLED = 'cancelled'
+const DEFAULT_RESERVATION_STATUS = RESERVATION_STATUS_CONFIRMED
+
+// ============ HTTP STATUS CODES ============
+const HTTP_STATUS_OK = 200
+const HTTP_STATUS_CREATED = 201
+const HTTP_STATUS_BAD_REQUEST = 400
+const HTTP_STATUS_NOT_FOUND = 404
+const HTTP_STATUS_INTERNAL_SERVER_ERROR = 500
+
+// ============ ERROR MESSAGES ============
+const ERROR_EXCEEDS_CAPACITY = 'Number of people exceeds restaurant capacity'
+const ERROR_RESTAURANT_NOT_FOUND = 'Restaurant not found'
+const ERROR_RESERVATION_NOT_FOUND = 'Reservation not found'
+const ERROR_DATABASE = 'An error occurred while accessing the database'
+const ERROR_EXTERNAL_SERVICE = 'External Service Error'
+
+// ============ SUCCESS MESSAGES ============
+const SUCCESS_RESTAURANT_CREATED = 'Restaurant created successfully'
+const SUCCESS_RESTAURANT_UPDATED = 'Restaurant updated successfully'
+const SUCCESS_RESTAURANT_DELETED = 'Restaurant deleted successfully'
+const SUCCESS_RESERVATION_CREATED = 'Reservation created successfully'
+const SUCCESS_RESERVATION_UPDATED = 'Reservation updated successfully'
+const SUCCESS_RESERVATION_DELETED = 'Reservation deleted successfully'
+const SUCCESS_RESERVATION_CANCELLED = 'Reservation cancelled successfully'
+
+module.exports = {
+  // API
+  API_DEFAULT_PORT,
+  API_HEALTH_CHECK_MESSAGE,
+  // Database
+  DATABASE_FILENAME,
+  DATABASE_PATH,
+  // LocationIQ
+  LOCATION_IQ_API_KEY,
+  LOCATION_IQ_BASE_URL,
+  LOCATION_IQ_API_TIMEOUT_MS,
+  LOCATION_IQ_NEARBY_SEARCH_RESULT_LIMIT,
+  LOCATION_IQ_BOUNDED_SEARCH_ENABLED,
+  // Geographic
+  EARTH_RADIUS_KM,
+  DEGREES_TO_RADIANS,
+  DEGREES_PER_KILOMETER,
+  DISTANCE_DECIMAL_PLACES,
+  // Validation
+  // Validation constants removed - not used in codebase
+  // Restaurant
+  DEFAULT_RESTAURANT_NAME,
+  DEFAULT_ADDRESS,
+  // Reservation
+  RESERVATION_STATUS_CONFIRMED,
+  RESERVATION_STATUS_CANCELLED,
+  DEFAULT_RESERVATION_STATUS,
+  // HTTP Status
+  HTTP_STATUS_OK,
+  HTTP_STATUS_CREATED,
+  HTTP_STATUS_BAD_REQUEST,
+  HTTP_STATUS_NOT_FOUND,
+  HTTP_STATUS_INTERNAL_SERVER_ERROR,
+  // Error Messages
+  ERROR_EXCEEDS_CAPACITY,
+  ERROR_RESTAURANT_NOT_FOUND,
+  ERROR_RESERVATION_NOT_FOUND,
+  ERROR_DATABASE,
+  ERROR_EXTERNAL_SERVICE,
+  // Success Messages
+  SUCCESS_RESTAURANT_CREATED,
+  SUCCESS_RESTAURANT_UPDATED,
+  SUCCESS_RESTAURANT_DELETED,
+  SUCCESS_RESERVATION_CREATED,
+  SUCCESS_RESERVATION_UPDATED,
+  SUCCESS_RESERVATION_DELETED,
+  SUCCESS_RESERVATION_CANCELLED
+}
