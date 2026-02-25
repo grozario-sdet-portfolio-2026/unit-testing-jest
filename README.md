@@ -1,5 +1,10 @@
 # Sistema de Agendamento de Restaurantes
 
+[![Jest](https://img.shields.io/badge/tested_with-jest-99424f?style=flat-square)](https://jestjs.io/)
+[![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen?style=flat-square)](./coverage/lcov-report/index.html)
+[![Branch Coverage](https://img.shields.io/badge/branch_coverage-100%25-brightgreen?style=flat-square)](./coverage/lcov-report/index.html)
+[![Tests](https://img.shields.io/badge/tests-624%20passed-brightgreen?style=flat-square)](./tests)
+
 Um sistema robusto de API REST para gerenciar reservas em restaurantes com integração geolocalização via LocationIQ para buscar restaurantes próximos. O projeto é desenvolvido em Node.js com Express, utiliza SQLite para persistência de dados e Jest para testes unitários.
 
 ## Características
