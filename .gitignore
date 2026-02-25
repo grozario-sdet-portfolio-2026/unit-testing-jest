@@ -2,8 +2,8 @@ node_modules/
 *.db
 .env.local
 .env.*.local
+.env
 dist/
-coverage/
 .vscode/
 .idea/
 *.log
